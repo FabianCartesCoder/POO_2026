@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucles y Condiciones</title>
+    <!-- Estilos de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="contenedor p-3 d-flex gap-3 ">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Ejercicio 1</h5>
+                <p class="card-text">El Contador en Pantalla</p>
+                <a href="#" class="btn btn-primary" onclick="contadorPantalla()">Ejecutar</a>
+                <div id="resultadoContainer" class="d-none">
+                    <h5>Resultado:</h5>
+                    <div id="resultado1" class="alert alert-success fw-bold">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Ejercicio 2</h5>
+                <p class="card-text">Lista de Asistencia Automática</p>
+                <a href="#" class="btn btn-primary" onclick="asistenciaAutomatica()">Ejecutado</a>
+                <div id="resultadoContainer2" class="d-none">
+                    <h5>Resultado:</h5>
+                    <div id="resultado2" class="alert alert-success fw-bold">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Ejercicio 3</h5>
+                <p class="card-text">Buscador de Aprobados (Escala 1 a 7)</p>
+                <a href="#" class="btn btn-primary" onclick="buscadorAprobados()">Ejecutado</a>
+                <div id="resultadoContainer3" class="d-none">
+                    <h5>Resultado:</h5>
+                    <div id="resultado3" class="alert alert-success fw-bold">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Ejercicio 4</h5>
+                <p class="card-text">El Filtro de Inventario</p>
+                <a href="#" class="btn btn-primary" onclick="filtroInventario()">Ejecutado</a>
+                <div id="resultadoContainer4" class="d-none">
+                    <h5>Resultado:</h5>
+                    <div id="resultado4" class="alert alert-success fw-bold">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Ejercicio 5</h5>
+                <p class="card-text">Sumando la Colecta</p>
+                <a href="#" class="btn btn-primary" onclick="sumandoColecta()">Ejecutado</a>
+                <div id="resultadoContainer5" class="d-none">
+                    <h5>Resultado:</h5>
+                    <div id="resultado5" class="alert alert-success fw-bold">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <main class="contenedor p-3 d-flex gap-3">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Ejercicio 6</h5>
+                <p class="card-text">Acceso VIP</p>
+                <a href="#" class="btn btn-primary" onclick="formateadorNombresVIP()">Ejecutado</a>
+                <div id="resultadoContainer6" class="d-none">
+                    <h5>Resultado:</h5>
+                    <div id="resultado6" class="alert alert-success fw-bold">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Ejercicio 7</h5>
+                <p class="card-text">El Buscador de Stock Específico</p>
+                <a href="#" class="btn btn-primary" onclick="buscadorStockEspecifico()">Ejecutado</a>
+                <div id="resultadoContainer7" class="d-none">
+                    <h5>Resultado:</h5>
+                    <div id="resultado7" class="alert alert-success fw-bold">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Ejercicio 8</h5>
+                <p class="card-text">Generador de Párrafos de Advertencia</p>
+                <a href="#" class="btn btn-primary" onclick="generadorParrafosAdvertencia()">Ejecutado</a>
+                <div id="resultadoContainer8" class="d-none">
+                    <h5>Resultado:</h5>
+                    <div id="resultado8" class="alert alert-success fw-bold">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Ejercicio 9</h5>
+                <p class="card-text">El Almacén de Matrices (2D Arrays)</p>
+                <a href="#" class="btn btn-primary" onclick="bloque4_9()">Ejecutado</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Ejercicio 10</h5>
+                <p class="card-text">Registro Maestro de Visitas</p>
+                <a href="#" class="btn btn-primary" onclick="bloque4_10()">Ejecutado</a>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Scripts de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="static/js/script.js"></script>
+</body>
+
+</html>
