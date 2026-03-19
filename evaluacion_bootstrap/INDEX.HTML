@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gmail Clone - Full Interactive Version</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css">
+
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="d-flex align-items-center" style="width: 250px;">
+            <button class="btn btn-light rounded-circle border-0 p-2" id="menu-btn">
+                <span class="material-icons-outlined">menu</span>
+            </button>
+            <img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_1x_r5.png" alt="Gmail"
+                height="40" class="ms-3">
+        </div>
+
+        <div class="search-container">
+            <span class="material-icons-outlined text-secondary">search</span>
+            <input type="text" placeholder="Buscar correo" id="search-input">
+        </div>
+
+        <div class="ms-auto d-flex align-items-center gap-3">
+            <div class="status-badge">
+                <span class="dot"></span>
+                Activo
+            </div>
+            <span class="material-icons-outlined icon">settings</span>
+            <div id="user-profile-trigger"
+                class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center fw-bold icon"
+                style="width:32px; height:32px; font-size: 14px;">F</div>
+        </div>
+    </header>
+
+    <div class="main-wrapper">
+        <nav class="app-bar">
+            <div class="app-item"><span class="material-icons-outlined">mail</span>Mail</div>
+            <div class="app-item"><span class="material-icons-outlined">chat_bubble_outline</span>Chat</div>
+            <div class="app-item"><span class="material-icons-outlined">videocam</span>Meet</div>
+        </nav>
+
+        <aside class="sidebar" id="main-sidebar">
+            <button class="btn-redactar" id="open-compose">
+                <span class="material-icons-outlined">edit</span> Redactar
+            </button>
+
+            <a href="#" class="nav-link-custom active">
+                <span class="material-icons-outlined">inbox</span> Recibidos
+            </a>
+
+            <div>
+                <a href="#" class="nav-link-custom" id="toggle-categories">
+                    <span class="material-icons-outlined">category</span> Categorías
+                    <span class="material-icons-outlined ms-auto" id="cat-arrow">expand_more</span>
+                </a>
+                <div class="sub-menu d-none" id="categories-list">
+                    <a href="#" class="nav-link-custom"><span class="material-icons-outlined">people</span> Social</a>
+                    <a href="#" class="nav-link-custom"><span class="material-icons-outlined">local_offer</span>
+                        Promociones</a>
+                </div>
+            </div>
+
+            <a href="#" class="nav-link-custom">
+                <span class="material-icons-outlined">star_border</span> Destacados
+            </a>
+        </aside>
+
+        <main class="mail-panel shadow-sm">
+            <div class="p-3 border-bottom d-flex justify-content-between align-items-center">
+                <div class="d-flex gap-3">
+                    <span class="material-icons-outlined icon" id="master-check">check_box_outline_blank</span>
+                    <span class="material-icons-outlined icon" onclick="location.reload()">refresh</span>
+                </div>
+                <div class="text-secondary small">1-3 de 3</div>
+            </div>
+
+            <div class="overflow-auto" id="email-container">
+            </div>
+        </main>
+    </div>
+
+    <div id="profile-menu" class="profile-card">
+        <div class="text-center">
+            <div class="profile-avatar-big">F</div>
+            <div class="fw-bold">Dany Hernandez</div>
+            <div class="text-muted small mb-3">dany.her@comeduc.cl</div>
+            <button class="btn btn-outline-primary btn-sm rounded-pill px-3">Administrar cuenta</button>
+        </div>
+        <hr>
+        <div class="list-group list-group-flush">
+            <div class="list-group-item list-group-item-action border-0 icon small"><span
+                    class="material-icons-outlined me-2">person_add</span> Añadir cuenta</div>
+            <div class="list-group-item list-group-item-action border-0 icon small"><span
+                    class="material-icons-outlined me-2">logout</span> Cerrar sesión</div>
+        </div>
+    </div>
+
+    <div class="compose-box" id="compose-window">
+        <div class="p-2 bg-light d-flex justify-content-between align-items-center rounded-top">
+            <span class="ps-2 fw-medium small">Mensaje nuevo</span>
+            <span class="material-icons-outlined icon p-1" id="close-compose">close</span>
+        </div>
+        <div class="p-3">
+            <input type="text" class="form-control border-0 border-bottom mb-2 shadow-none" placeholder="Para">
+            <input type="text" class="form-control border-0 border-bottom mb-2 shadow-none" placeholder="Asunto">
+            <textarea class="form-control border-0 shadow-none" rows="8" placeholder="Escribe aquí..."></textarea>
+            <button class="btn btn-primary rounded-pill px-4 mt-3" id="send-btn">Enviar</button>
+        </div>
+    </div>
+
+    <script src="static/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
