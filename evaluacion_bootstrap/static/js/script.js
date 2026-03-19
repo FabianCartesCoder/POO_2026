@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const profileTrigger = document.getElementById('user-profile-trigger');
     const profileMenu = document.getElementById('profile-menu');
 
-    // --- RENDERIZADO DE CORREOS ---
+    
     function render(data = emails) {
         container.innerHTML = data.map(m => `
                     <div class="email-item ${m.unread ? 'unread' : ''}" data-id="${m.id}">
@@ -56,13 +56,13 @@ document.addEventListener('DOMContentLoaded', () => {
         render(filtered);
     };
 
-    // --- MENÚ PERFIL ---
+    // --- MENU PERFIL ---
     profileTrigger.onclick = (e) => {
         e.stopPropagation();
         profileMenu.style.display = (profileMenu.style.display === 'block') ? 'none' : 'block';
     };
 
-    // --- CATEGORÍAS (Sidebar) ---
+    // categorias
     document.getElementById('toggle-categories').onclick = (e) => {
         e.preventDefault();
         const list = document.getElementById('categories-list');
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
         arrow.innerText = list.classList.contains('d-none') ? 'expand_more' : 'expand_less';
     };
 
-    // --- OTROS EVENTOS ---
+    //otros botones 
     document.getElementById('menu-btn').onclick = () => document.getElementById('main-sidebar').classList.toggle('collapsed');
     document.getElementById('open-compose').onclick = () => document.getElementById('compose-window').style.display = 'block';
     document.getElementById('close-compose').onclick = () => document.getElementById('compose-window').style.display = 'none';
